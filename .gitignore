@@ -1,0 +1,10 @@
+/target/
+/.idea/
+*.iml
+.env
+*.log
+/tools/
+/backups/
+/local-db/
+# Capturas locales: muestran nombres y datos de la cuenta de demostración.
+/*.png

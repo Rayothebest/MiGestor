@@ -1,0 +1,28 @@
+.scheduled-inbox { margin-top: 30px; }
+.scheduled-inbox .section-title { margin-bottom: 13px; }
+.scheduled-inbox .section-title h2 { margin-top: 0; }
+.scheduled-inbox .section-title p { margin: 0; }
+.scheduled-notifications { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
+.scheduled-notification, .scheduled-empty { min-width: 0; padding: 18px 20px; border: 1px solid var(--line); border-radius: 13px; background: #fff; box-shadow: var(--shadow); }
+.scheduled-notification { border-left: 4px solid #6a5be2; }
+.scheduled-notification.is-read { border-left-color: #adb4c7; background: #fbfcff; }
+.scheduled-notification-head, .scheduled-notification-foot { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.scheduled-notification-head > div { display: grid; gap: 4px; min-width: 0; }
+.scheduled-notification-head strong { overflow-wrap: anywhere; }
+.scheduled-notification-head span:not(.status-badge), .scheduled-notification-foot small, .scheduled-empty { color: var(--muted); font-size: 12px; line-height: 1.5; }
+.scheduled-notification p { margin: 12px 0; line-height: 1.5; overflow-wrap: anywhere; }
+.scheduled-notification-foot { align-items: center; }
+.scheduled-notification-foot .actions { flex-wrap: wrap; margin: 0; }
+.scheduled-notification-foot .secondary { font-size: 12px; padding: 8px 10px; white-space: nowrap; }
+.scheduled-rule-state { display: grid; gap: 3px; margin-top: 14px; padding: 10px 12px; border-radius: 9px; background: #f3f4fa; color: var(--ink); font-size: 12px; }
+.scheduled-rule-state small { color: var(--muted); font-size: 11px; }
+.scheduled-rule-form { display: flex; align-items: end; gap: 8px; margin-top: 12px; }
+.scheduled-rule-form label { flex: 1 1 auto; min-width: 0; font-size: 12px; }
+.scheduled-rule-form select { width: 100%; min-width: 0; }
+.scheduled-rule-form button { flex: 0 0 auto; white-space: nowrap; }
+@media (max-width: 900px) { .scheduled-notifications { grid-template-columns: 1fr; } }
+@media (max-width: 580px) {
+  .scheduled-notification-head, .scheduled-notification-foot, .scheduled-rule-form { flex-direction: column; align-items: stretch; }
+  .scheduled-notification-foot .actions { justify-content: flex-start; }
+  .scheduled-rule-form button { align-self: flex-start; }
+}

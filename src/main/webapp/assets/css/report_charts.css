@@ -1,0 +1,36 @@
+.report-card.has-chart { grid-column: span 2; min-width: 0; }
+.report-visual { margin: 16px 0; padding: 15px; border: 1px solid var(--line); border-radius: 11px; background: #fbfcff; }
+.report-visual-subtitle { margin: 0 0 14px; color: var(--muted); font-size: 12px; }
+.report-visual-plot { min-height: 80px; }
+.report-visual-note { color: var(--muted); font-size: 12px; }
+.saved-chart-bars { display: grid; gap: 10px; }
+.saved-chart-bar-row { display: grid; grid-template-columns: minmax(80px, 145px) minmax(50px, 1fr) minmax(55px, auto); align-items: center; gap: 9px; font-size: 12px; }
+.saved-chart-bar-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.saved-chart-bar-track { height: 14px; border-radius: 999px; background: #e9ebf4; overflow: hidden; }
+.saved-chart-bar-fill { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #6354d6, #9e94ed); }
+.saved-chart-bar-fill.negative { background: linear-gradient(90deg, #df7285, #f4a3a1); }
+.saved-chart-bar-value { text-align: right; font-variant-numeric: tabular-nums; }
+.saved-chart-pie-layout { display: flex; align-items: center; gap: 24px; }
+.saved-chart-pie { flex: 0 0 175px; width: 175px; height: 175px; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 0 0 1px var(--line); }
+.saved-chart-legend { display: grid; gap: 7px; min-width: 0; width: 100%; }
+.saved-chart-legend-item { display: grid; grid-template-columns: 13px minmax(0,1fr) auto; gap: 8px; align-items: center; font-size: 12px; }
+.saved-chart-legend-item span:nth-child(2) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.saved-chart-legend-item strong { font-variant-numeric: tabular-nums; }
+.saved-chart-swatch { display: block; width: 13px; height: 13px; border-radius: 3px; }
+.saved-chart-line { display: block; width: 100%; height: auto; max-height: 270px; }
+.saved-chart-zero { stroke: #c7ccdd; stroke-width: 1.5; }
+.saved-chart-line-path { fill: none; stroke: #6354d6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.saved-chart-line-dot { fill: #6354d6; stroke: #fff; stroke-width: 2; }
+.saved-chart-line-label, .saved-chart-axis-label { fill: #67718a; font-size: 10px; }
+.report-visual-data { margin-top: 13px; font-size: 12px; }
+.report-visual-data summary { color: var(--accent); cursor: pointer; font-weight: 700; }
+.report-visual-table-wrap { max-height: 270px; overflow: auto; margin-top: 8px; }
+.report-visual-data table { width: 100%; border-collapse: collapse; }
+.report-visual-data th, .report-visual-data td { padding: 7px 9px; border-bottom: 1px solid var(--line); text-align: left; }
+.report-visual-data td { text-align: right; font-variant-numeric: tabular-nums; }
+@media (max-width: 900px) { .report-card.has-chart { grid-column: span 1; } }
+@media (max-width: 550px) {
+  .saved-chart-pie-layout { flex-direction: column; align-items: stretch; }
+  .saved-chart-pie { align-self: center; }
+  .saved-chart-bar-row { grid-template-columns: minmax(65px, 95px) minmax(40px,1fr) auto; }
+}

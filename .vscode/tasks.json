@@ -1,0 +1,52 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "MiGestor: compilar WAR",
+      "type": "shell",
+      "command": "${workspaceFolder}\\mvnw.cmd",
+      "args": ["clean", "package"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$javac"]
+    },
+    {
+      "label": "MiGestor: pruebas",
+      "type": "shell",
+      "command": "${workspaceFolder}\\mvnw.cmd",
+      "args": ["test"],
+      "group": "test",
+      "problemMatcher": ["$javac"]
+    },
+    {
+      "label": "MiGestor: desplegar en el equipo original",
+      "type": "shell",
+      "command": "${workspaceFolder}\\run-dev.cmd",
+      "options": {
+        "env": {
+          "CATALINA_HOME": "${workspaceFolder}\\tools\\apache-tomcat-10.1.61"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "MiGestor: desplegar en Tomcat externo",
+      "type": "shell",
+      "command": "${workspaceFolder}\\ejecutar-en-tomcat.cmd",
+      "problemMatcher": []
+    },
+    {
+      "label": "MiGestor: detener Tomcat 10",
+      "type": "shell",
+      "command": "${workspaceFolder}\\stop-dev.cmd",
+      "options": {
+        "env": {
+          "CATALINA_HOME": "${workspaceFolder}\\tools\\apache-tomcat-10.1.61"
+        }
+      },
+      "problemMatcher": []
+    }
+  ]
+}
